@@ -15,9 +15,12 @@
 
 Use Node.js and Express to build an API that performs CRUD operations on users.
 
-- Add a `.gitignore` file appropriate for `node.js` projects.
-- Add a new `package.json`.
-- Add a `server` script to `package.json` that runs the API using `nodemon`.
+- Add a `.gitignore` file appropriate for `node.js` projects. npx gitignore node
+- Add a new `package.json`. npm init -y
+- Add a `server` script to `package.json` that runs the API using `nodemon`. npm i -D nodemon
+
+in terminal: npm i express
+ under scripts: "server": "nodemon server.js"
 
 ### Write endpoints
 
