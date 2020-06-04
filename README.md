@@ -17,7 +17,7 @@ Use Node.js and Express to build an API that performs CRUD operations on users.
 
 - Add a `.gitignore` file appropriate for `node.js` projects. npx gitignore node
 - Add a new `package.json`. npm init -y
-- Add a `server` script to `package.json` that runs the API using `nodemon`. npm i -D nodemon
+- Add a `server` script to `package.json` that runs the API using `nodemon`. npm i -D nodemon // npm i --save-dev nodemon
 
 in terminal: npm i express
  under scripts: "server": "nodemon server.js"
@@ -52,14 +52,14 @@ When the client makes a `POST` request to `/api/users`:
 
 - If the request body is missing the `name` or `bio` property:
 
-  - respond with HTTP status code `400` (Bad Request).
-  - return the following JSON response: `{ errorMessage: "Please provide name and bio for the user." }`.
+  - respond with HTTP status code `400` (Bad Request). *****
+  - return the following JSON response: `{ errorMessage: "Please provide name and bio for the user." }`. *****
 
 - If the information about the _user_ is valid:
 
-  - save the new _user_ the the database.
-  - respond with HTTP status code `201` (Created).
-  - return the newly created _user document_.
+  - save the new _user_ the the database. *****
+  - respond with HTTP status code `201` (Created). *****
+  - return the newly created _user document_. *****
 
 - If there's an error while saving the _user_:
   - respond with HTTP status code `500` (Server Error).
@@ -73,10 +73,10 @@ When the client makes a `GET` request to `/api/users`:
 
 When the client makes a `GET` request to `/api/users/:id`:
 
-- If the _user_ with the specified `id` is not found:
+- If the _user_ with the specified `id` is not found: ******
 
-  - respond with HTTP status code `404` (Not Found).
-  - return the following JSON object: `{ message: "The user with the specified ID does not exist." }`.
+  - respond with HTTP status code `404` (Not Found). *******
+  - return the following JSON object: `{ message: "The user with the specified ID does not exist." }`. *****
 
 - If there's an error in retrieving the _user_ from the database:
   - respond with HTTP status code `500`.
@@ -97,13 +97,13 @@ When the client makes a `PUT` request to `/api/users/:id`:
 
 - If the _user_ with the specified `id` is not found:
 
-  - respond with HTTP status code `404` (Not Found).
-  - return the following JSON object: `{ message: "The user with the specified ID does not exist." }`.
+  - respond with HTTP status code `404` (Not Found).*****
+  - return the following JSON object: `{ message: "The user with the specified ID does not exist." }`. ******
 
 - If the request body is missing the `name` or `bio` property:
 
-  - respond with HTTP status code `400` (Bad Request).
-  - return the following JSON response: `{ errorMessage: "Please provide name and bio for the user." }`.
+  - respond with HTTP status code `400` (Bad Request). *****
+  - return the following JSON response: `{ errorMessage: "Please provide name and bio for the user." }`. *******
 
 - If there's an error when updating the _user_:
 
@@ -113,8 +113,8 @@ When the client makes a `PUT` request to `/api/users/:id`:
 - If the user is found and the new information is valid:
 
   - update the user document in the database using the new information sent in the `request body`.
-  - respond with HTTP status code `200` (OK).
-  - return the newly updated _user document_.
+  - respond with HTTP status code `200` (OK).******
+  - return the newly updated _user document_.*******
 
 ## Stretch Problems
 
@@ -130,3 +130,7 @@ Create a new React application and connect it to your server:
 - add a delete button to each displayed user that will remove it from the server.
 - add forms to add and update data.
 - Style the list of users however you see fit.
+
+
+API is a piece of software that makes some funct available to some external programs. when the route handler fun is made public by exposing them to the endpoints
+Application Program Interface. 
